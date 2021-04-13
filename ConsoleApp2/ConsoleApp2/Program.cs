@@ -13,7 +13,10 @@ namespace ConsoleApp2
             var typesExercises = new TypesExercises();
             //int tmp = typesExercises.TestReferenceType();
             //typesExercises.Test2CloneReferenceType();
-            typesExercises.BoxingExample();
+            //typesExercises.BoxingExample();
+
+            var listExercises = new ListExercises();
+            listExercises.Exercise();
             Console.ReadKey();
         }
     }
