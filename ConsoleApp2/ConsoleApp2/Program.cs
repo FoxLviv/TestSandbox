@@ -15,8 +15,11 @@ namespace ConsoleApp2
             //typesExercises.Test2CloneReferenceType();
             //typesExercises.BoxingExample();
 
-            var listExercises = new ListExercises();
-            listExercises.Exercise();
+            //var listExercises = new ListExercises();
+            //listExercises.Exercise();
+            
+            var dictionaryExample = new DictionaryExample();
+            dictionaryExample.Example();
             Console.ReadKey();
         }
     }
