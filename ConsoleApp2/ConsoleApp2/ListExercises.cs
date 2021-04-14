@@ -11,18 +11,23 @@ namespace ConsoleApp2
 
         public void Exercise()
         {
-            List<int> primitiveNumbers = new List<int>() { 1, 2 };
+            var primitiveNumbers = new List<int>() { 1, 2 };
             primitiveNumbers.Add(3);
 
             primitiveNumbers.Insert(3, 4);
 
             for (int i = 0; i < primitiveNumbers.Count; i++)
+            {
                 Console.WriteLine(primitiveNumbers[i]);
+            }                
 
             if (primitiveNumbers.Contains(4))
             {
                 primitiveNumbers.Remove(4);
-            }
+            }//по індексу  IEnumerable IQuarable         
+
+            var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));//ILookup why?
+            var res2 = res.ToList();
         }
         public void JoinEx1()
         {

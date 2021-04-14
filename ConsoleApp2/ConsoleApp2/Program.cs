@@ -11,7 +11,7 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             var typesExercises = new TypesExercises();
-            //int tmp = typesExercises.TestReferenceType();
+            int tmp = typesExercises.TestReferenceType();
             //typesExercises.Test2CloneReferenceType();
             //typesExercises.BoxingExample();
 

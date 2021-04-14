@@ -10,13 +10,15 @@ namespace ConsoleApp2
     {
         public void Example()
         {
-            IDictionary<int, string> numberNames = new Dictionary<int, string>();
+            var numberNames = new Dictionary<int, string>();
             numberNames.Add(1, "One"); //adding a key/value using the Add() method
             numberNames.Add(2, "Two");
             numberNames.Add(3, "Three");
 
             if (numberNames.ContainsKey(3))
+            {
                 numberNames.Remove(3);
+            }                
 
             string result;
             if (numberNames.TryGetValue(2, out result))
@@ -26,7 +28,10 @@ namespace ConsoleApp2
 
             //numberNames.Clear();
             foreach (KeyValuePair<int, string> kvp in numberNames)
+            {
                 Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value);
+            }
+                
         }
         
     }
