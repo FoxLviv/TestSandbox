@@ -45,10 +45,12 @@
   <ItemGroup>
     <Compile Include="ClassesExample.cs" />
     <Compile Include="DictionaryExample.cs" />
+    <Compile Include="EnumerationExample.cs" />
     <Compile Include="ListExercises.cs" />
     <Compile Include="ClassToCreateConflict.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringsExample.cs" />
     <Compile Include="TypesExercises.cs" />
   </ItemGroup>
   <ItemGroup>

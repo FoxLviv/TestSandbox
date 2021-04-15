@@ -8,14 +8,20 @@ namespace ConsoleApp2
         {
             //var typesExercises = new TypesExercises();
             //int tmp = typesExercises.TestReferenceType();
+
+            
             //typesExercises.Test2CloneReferenceType();
             //typesExercises.BoxingExample();
 
-            var listExercises = new ListExercises();
-            listExercises.Exercise();
-            
+            //var listExercises = new ListExercises();
+            //listExercises.Exercise();
+
             //var dictionaryExample = new DictionaryExample();
             //dictionaryExample.Example();
+
+            var stringExercise = new StringsExample();
+            stringExercise.Example();
+            
             Console.ReadKey();
         }
     }

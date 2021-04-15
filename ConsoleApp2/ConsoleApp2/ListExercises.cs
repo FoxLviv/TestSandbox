@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -21,9 +19,17 @@ namespace ConsoleApp2
             //    Console.WriteLine(primitiveNumbers[i]);
             //}                
 
+
             if (primitiveNumbers.Contains(4))
             {
                 primitiveNumbers.Remove(4);
+            }
+
+            primitiveNumbers.RemoveAt(primitiveNumbers.Count - 1);
+
+            for (int i = 0; i < primitiveNumbers.Count; i++)
+            {
+                Console.WriteLine(primitiveNumbers[i]);
             }
 
             var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));
