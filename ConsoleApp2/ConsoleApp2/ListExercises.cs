@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -16,17 +14,21 @@ namespace ConsoleApp2
 
             primitiveNumbers.Insert(3, 4);
 
-            for (int i = 0; i < primitiveNumbers.Count; i++)
-            {
-                Console.WriteLine(primitiveNumbers[i]);
-            }                
+                    
 
             if (primitiveNumbers.Contains(4))
             {
                 primitiveNumbers.Remove(4);
-            }//по індексу  IEnumerable IQuarable         
+            }
 
-            var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));//ILookup why?
+            primitiveNumbers.RemoveAt(primitiveNumbers.Count - 1);
+
+            for (int i = 0; i < primitiveNumbers.Count; i++)
+            {
+                Console.WriteLine(primitiveNumbers[i]);
+            }
+
+            var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));
             var res2 = res.ToList();
         }
         public void JoinEx1()
