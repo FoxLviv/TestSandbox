@@ -16,15 +16,18 @@ namespace ConsoleApp2
 
             primitiveNumbers.Insert(3, 4);
 
-            for (int i = 0; i < primitiveNumbers.Count; i++)
-            {
-                Console.WriteLine(primitiveNumbers[i]);
-            }                
+                    
 
             if (primitiveNumbers.Contains(4))
             {
                 primitiveNumbers.Remove(4);
-            }//по індексу  IEnumerable IQuarable         
+            }
+            primitiveNumbers.RemoveAt(primitiveNumbers.Count - 1);
+
+            for (int i = 0; i < primitiveNumbers.Count; i++)
+            {
+                Console.WriteLine(primitiveNumbers[i]);
+            }
 
             var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));//ILookup why?
             var res2 = res.ToList();
