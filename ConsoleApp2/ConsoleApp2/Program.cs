@@ -6,16 +6,16 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            var typesExercises = new TypesExercises();
-            int tmp = typesExercises.TestReferenceType();
+            //var typesExercises = new TypesExercises();
+            //int tmp = typesExercises.TestReferenceType();
             //typesExercises.Test2CloneReferenceType();
             //typesExercises.BoxingExample();
 
-            //var listExercises = new ListExercises();
-            //listExercises.Exercise();
+            var listExercises = new ListExercises();
+            listExercises.Exercise();
             
-            var dictionaryExample = new DictionaryExample();
-            dictionaryExample.Example();
+            //var dictionaryExample = new DictionaryExample();
+            //dictionaryExample.Example();
             Console.ReadKey();
         }
     }

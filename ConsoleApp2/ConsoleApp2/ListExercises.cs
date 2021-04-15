@@ -16,18 +16,43 @@ namespace ConsoleApp2
 
             primitiveNumbers.Insert(3, 4);
 
-            for (int i = 0; i < primitiveNumbers.Count; i++)
-            {
-                Console.WriteLine(primitiveNumbers[i]);
-            }                
+            //for (int i = 0; i < primitiveNumbers.Count; i++)
+            //{
+            //    Console.WriteLine(primitiveNumbers[i]);
+            //}                
 
             if (primitiveNumbers.Contains(4))
             {
                 primitiveNumbers.Remove(4);
-            }//по індексу  IEnumerable IQuarable         
+            }
 
-            var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));//ILookup why?
+            var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));
             var res2 = res.ToList();
+
+            //Ref type in list
+
+            var refTypes = new List<Person>()
+            {
+                new Person { Name = "Hedlund, Magnus" },
+                new Person { Name = "Adams, Terry" },
+                new Person { Name = "Weiss, Charlotte" }
+            };
+            refTypes.Add(new Person { Name = "Magnus, Karlson" });
+            var adam = new Person { Name = "Adam, West" };
+
+            refTypes.Insert(3, adam);
+
+
+            Console.WriteLine(refTypes.Count());
+            if (refTypes.Contains(adam))
+            {
+                refTypes.Remove(adam);
+            }
+            Console.WriteLine(refTypes.Count());
+            for (int i = 0; i < refTypes.Count; i++)
+            {
+                Console.WriteLine(refTypes[i].Name);
+            }
         }
         public void JoinEx1()
         {
