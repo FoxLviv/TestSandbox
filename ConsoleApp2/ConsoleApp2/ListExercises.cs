@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -22,6 +20,7 @@ namespace ConsoleApp2
             {
                 primitiveNumbers.Remove(4);
             }
+
             primitiveNumbers.RemoveAt(primitiveNumbers.Count - 1);
 
             for (int i = 0; i < primitiveNumbers.Count; i++)
@@ -29,7 +28,7 @@ namespace ConsoleApp2
                 Console.WriteLine(primitiveNumbers[i]);
             }
 
-            var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));//ILookup why?
+            var res = primitiveNumbers.Distinct().ToDictionary(x => x, x => string.Format("Val{0}", x));
             var res2 = res.ToList();
         }
         public void JoinEx1()

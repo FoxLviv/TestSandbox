@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -15,37 +12,37 @@ namespace ConsoleApp2
             int index = s2.IndexOf('l');
 
             var sb1 = new StringBuilder("Heloo");
-            sb1[3] = 'l';
+            s1 += 'l';
 
             //Microsoft example
             string question = "hOW DOES mICROSOFT wORD DEAL WITH THE cAPS lOCK KEY?";
-            System.Text.StringBuilder sb = new System.Text.StringBuilder(question);
+            var sb = new StringBuilder(question);
 
             for (int j = 0; j < sb.Length; j++)
             {
-                if (System.Char.IsLower(sb[j]) == true)
+                if (Char.IsLower(sb[j]) == true)
                 {
-                    sb[j] = System.Char.ToUpper(sb[j]);
-                }                    
-                else if (System.Char.IsUpper(sb[j]) == true)
+                    sb[j] = Char.ToUpper(sb[j]);
+                }
+                else if (Char.IsUpper(sb[j]) == true)
                 {
-                    sb[j] = System.Char.ToLower(sb[j]);
-                }                    
+                    sb[j] = Char.ToLower(sb[j]);
+                }
             }
             // Store the new string.
-            string corrected = sb.ToString();
-            System.Console.WriteLine(corrected);
+            var corrected = sb.ToString();
+            Console.WriteLine(corrected);
 
-            var joinedLine = MakeLine(0, 5, ",");
+            string joinedLine = MakeLine(0, 5, ",");
 
-            var splitedLine = joinedLine.Split(',');
+            string[] splitedLine = joinedLine.Split(',');
             
         }
 
         //Join Example
         string MakeLine(int initVal, int multVal, string sep)
         {
-            string[] sArr = new string[10];
+            var sArr = new string[10];
 
             for (int i = initVal; i < initVal + 10; i++)
             {
