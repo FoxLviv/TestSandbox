@@ -5,6 +5,7 @@ namespace ConsoleApp2
     class ClassesExample
     {
         Plant tree = new Tree("IDK","Cherry");
+        ILeaf leaf = new Tree("IDK", "Apple");
     }
     //https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-c-sharp/
 
