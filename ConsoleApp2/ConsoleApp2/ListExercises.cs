@@ -50,19 +50,27 @@ namespace ConsoleApp2
 
 
             Console.WriteLine(refTypes.Count());
-            if (refTypes.Contains(adam))
-            {
-                adam.Name = String.Empty;
-            }
-            var copy = refTypes;
-            Console.WriteLine(refTypes.Count());
-            for (int i = 0; i < refTypes.Count; i++)
-            {
-                Console.WriteLine(refTypes[i].Name);
-            }
+            //if (refTypes.Contains(adam))
+            //{
+            //    adam.Name = String.Empty;
+            //}
 
-            
+            //var copy = refTypes.Select(person => new Person { Name = person.Name }).ToList();
+            var copy = refTypes.ToList();
+            copy.RemoveAt(1);
+            PrintList(refTypes);
+            PrintList(copy);
         }
+
+        private void PrintList(List<Person> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i].Name);
+            }
+            Console.WriteLine('\n');
+        }
+
         public void JoinEx1()
         {
             Person magnus = new Person { Name = "Hedlund, Magnus" };
