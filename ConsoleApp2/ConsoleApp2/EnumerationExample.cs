@@ -1,7 +1,19 @@
-﻿namespace ConsoleApp2
+﻿using System;
+using System.Collections;
+
+namespace ConsoleApp2
 {
     class EnumerationExample
     {
+        public void Example()
+        {
+            Numbers numbers = new Numbers();
+            foreach (int n in numbers)
+            {
+                Console.WriteLine(n);
+            }
+            Console.ReadKey();
+        }
         //    IEnumerable<Phone> phoneIEnum = db.Phones;
         //    var phones = phoneIEnum.Where(p => p.Id > id).ToList();
 
@@ -22,5 +34,16 @@
 //FROM[dbo].[Phones]
 //        AS[Extent1]
 //WHERE[Extent1].[Id] >3
+    }
+
+    class Numbers
+    {
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                yield return i * i;
+            }
+        }
     }
 }
