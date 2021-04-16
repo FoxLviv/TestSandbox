@@ -8,7 +8,11 @@ namespace ConsoleApp2
 
         public void Example()
         {
-            Message mes;
+            Message mes = GoodMorning;
+           
+            
+            mes += GoodEvening;
+            mes();
             if (DateTime.Now.Hour < 12)
             {
                 mes = GoodMorning;
@@ -17,8 +21,6 @@ namespace ConsoleApp2
             {
                 mes = GoodEvening;
             }
-            mes();
-            mes += GoodEvening;
             mes();
             //Action
             Action<int, int> op;
@@ -40,40 +42,42 @@ namespace ConsoleApp2
             int n2 = GetInt(6, x => x * x);
             Console.WriteLine(n2); // 36
 
-            Account acc = new Account(100);
+            var acc = new Account(100);
             acc.Notify += DisplayMessage;   // Добавляем обработчик для события Notify
             acc.Put(20);    // добавляем на счет 20
-            Console.WriteLine($"Сумма на счете: {acc.Sum}");
+            DisplayMessage($"Сумма на счете: {acc.Sum}");
             acc.Take(70);   // пытаемся снять со счета 70
-            Console.WriteLine($"Сумма на счете: {acc.Sum}");
+            DisplayMessage($"Сумма на счете: {acc.Sum}");
             acc.Take(180);  // пытаемся снять со счета 180
-            Console.WriteLine($"Сумма на счете: {acc.Sum}");
+            DisplayMessage($"Сумма на счете: {acc.Sum}");
             Console.Read();
 
         }
 
-        static void Operation(int x1, int x2, Action<int, int> op)
+        void Operation(int x1, int x2, Action<int, int> op)
         {
             if (x1 > x2)
                 op(x1, x2);
         }
-        static void Add(int x1, int x2)
+        void Add(int x1, int x2)
         {
-            Console.WriteLine("Сумма чисел: " + (x1 + x2));
+            DisplayMessage("Сумма чисел: " + (x1 + x2));
         }
-        static void Substract(int x1, int x2)
+        void Substract(int x1, int x2)
         {
-            Console.WriteLine("Разность чисел: " + (x1 - x2));
+            DisplayMessage("Разность чисел: " + (x1 - x2));
         }
 
-        static int GetInt(int x1, Func<int, int> retF)
+        int GetInt(int x1, Func<int, int> retF)
         {
             int result = 0;
             if (x1 > 0)
+            {
                 result = retF(x1);
+            }                
             return result;
         }
-        static int Factorial(int x)
+        int Factorial(int x)
         {
             int result = 1;
             for (int i = 1; i <= x; i++)
@@ -88,13 +92,13 @@ namespace ConsoleApp2
             Console.WriteLine(message);
         }
 
-        private static void GoodMorning()
+        private void GoodMorning()
         {
-            Console.WriteLine("Good Morning");
+            DisplayMessage("Good Morning");
         }
-        private static void GoodEvening()
+        private void GoodEvening()
         {
-            Console.WriteLine("Good Evening");
+            DisplayMessage("Good Evening");
         }
     }
 

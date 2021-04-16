@@ -9,7 +9,7 @@ namespace ConsoleApp2
             //var typesExercises = new TypesExercises();
             //int tmp = typesExercises.TestReferenceType();
 
-            
+
             //typesExercises.Test2CloneReferenceType();
             //typesExercises.BoxingExample();
 

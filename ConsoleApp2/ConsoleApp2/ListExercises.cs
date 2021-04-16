@@ -43,7 +43,7 @@ namespace ConsoleApp2
                 new Person { Name = "Adams, Terry" },
                 new Person { Name = "Weiss, Charlotte" }
             };
-            refTypes.Add(new Person { Name = "Magnus, Karlson" });
+            refTypes.Add(new Person { Name = "Magnus, Carlsen" });
             var adam = new Person { Name = "Adam, West" };
 
             refTypes.Insert(3, adam);
@@ -52,13 +52,16 @@ namespace ConsoleApp2
             Console.WriteLine(refTypes.Count());
             if (refTypes.Contains(adam))
             {
-                refTypes.Remove(adam);
+                adam.Name = String.Empty;
             }
+            var copy = refTypes;
             Console.WriteLine(refTypes.Count());
             for (int i = 0; i < refTypes.Count; i++)
             {
                 Console.WriteLine(refTypes[i].Name);
             }
+
+            
         }
         public void JoinEx1()
         {
