@@ -54,9 +54,9 @@ namespace ConsoleApp2
             //{
             //    adam.Name = String.Empty;
             //}
-            
-            var copy = refTypes.Select(person => new Person { Name = person.Name }).ToList();
-            
+
+            //var copy = refTypes.Select(person => new Person { Name = person.Name }).ToList();
+            var copy = refTypes.ToList();
             copy.RemoveAt(1);
             PrintList(refTypes);
             PrintList(copy);
