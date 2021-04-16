@@ -79,12 +79,14 @@ namespace ConsoleApp2
         }
         int Factorial(int x)
         {
-            int result = 1;
-            for (int i = 1; i <= x; i++)
+            if (x == 0)
             {
-                result *= i;
+                return 1;
             }
-            return result;
+            else
+            {
+                return x * Factorial(x - 1);
+            }
         }
 
         private void DisplayMessage(string message)
