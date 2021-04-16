@@ -8,9 +8,10 @@ namespace ConsoleApp2
         public void Example()
         {
             var s1 = new String('a', 6);
-            var s2 = new String(new char[] { 'w', 'o', 'r', 'l', 'd' });
+            var s2 = new String(new char[] { 'w', 'o', 'r', 'l', 'd', 'l', 'l' });
             int index = s2.IndexOf('l');
-
+            var multipleIndexes = s2.IndexOf('l', index+1);
+            Console.WriteLine(multipleIndexes);
             var sb1 = new StringBuilder("Heloo");
             s1 += 'l';
 
@@ -36,7 +37,15 @@ namespace ConsoleApp2
             string joinedLine = MakeLine(0, 5, ",");
 
             string[] splitedLine = joinedLine.Split(',');
-            
+            splitedLine[2] = String.Empty;
+            foreach(string str in splitedLine)
+            {
+                Console.WriteLine(str);
+            }
+
+            joinedLine = String.Join(",", splitedLine);
+
+            Console.WriteLine(joinedLine);
         }
 
         //Join Example
