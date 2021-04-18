@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace ConsoleApp2
 {
@@ -7,10 +8,10 @@ namespace ConsoleApp2
     {
         public void Example()
         {
-            Numbers numbers = new Numbers();
-            foreach (int n in numbers)
+            var theGalaxies = new Galaxies();
+            foreach (Galaxy theGalaxy in theGalaxies.NextGalaxy)
             {
-                Console.WriteLine(n);
+                Console.WriteLine(theGalaxy.Name + " " + theGalaxy.MegaLightYears.ToString());
             }
             Console.ReadKey();
         }
@@ -36,14 +37,24 @@ namespace ConsoleApp2
 //WHERE[Extent1].[Id] >3
     }
 
-    class Numbers
+    public class Galaxies
     {
-        public IEnumerator GetEnumerator()
+
+        public IEnumerable<Galaxy> NextGalaxy
         {
-            for (int i = 0; i < 6; i++)
+            get
             {
-                yield return i * i;
+                yield return new Galaxy { Name = "Tadpole", MegaLightYears = 400 };
+                yield return new Galaxy { Name = "Pinwheel", MegaLightYears = 25 };
+                yield return new Galaxy { Name = "Milky Way", MegaLightYears = 0 };
+                yield return new Galaxy { Name = "Andromeda", MegaLightYears = 3 };
             }
         }
+    }
+
+    public class Galaxy
+    {
+        public string Name { get; set; }
+        public int MegaLightYears { get; set; }
     }
 }
