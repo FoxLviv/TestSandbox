@@ -13,8 +13,8 @@ namespace ConsoleApp2
             //typesExercises.Test2CloneReferenceType();
             //typesExercises.BoxingExample();
 
-            var listExercises = new ListExercises();
-            listExercises.Exercise();
+            //var listExercises = new ListExercises();
+            //listExercises.Exercise();
 
             //var dictionaryExample = new DictionaryExample();
             //dictionaryExample.Example();
@@ -25,6 +25,8 @@ namespace ConsoleApp2
             //var delAndEventExample = new DelegAndEventsExamples();
             //delAndEventExample.Example();
 
+            var threads = new ThreadsExample();
+            threads.Example();
 
             Console.ReadKey();
         }
