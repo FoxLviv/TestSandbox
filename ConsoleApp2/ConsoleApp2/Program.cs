@@ -25,6 +25,9 @@ namespace ConsoleApp2
             //var delAndEventExample = new DelegAndEventsExamples();
             //delAndEventExample.Example();
 
+            var threads = new ThreadsExample();
+            threads.Example();
+
             var linqExample = new LinqExample();
             linqExample.Example();
 
