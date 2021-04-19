@@ -25,10 +25,12 @@ namespace ConsoleApp2
             //var delAndEventExample = new DelegAndEventsExamples();
             //delAndEventExample.Example();
 
+            var linqExample = new LinqExample();
+            linqExample.Example();
+
             var enumerable = new EnumerationExample();
             //enumerable.AllEx2();
             enumerable.Example();
-
             Console.ReadKey();
         }
     }
