@@ -19,12 +19,12 @@ namespace ConsoleApp2
 
             var task = Task.Run(() => Console.WriteLine("Hello Task!"));
 
-            var thread = new Thread(new ThreadStart(getMyName));
+            var thread = new Thread(new ThreadStart(GetMyName));
             thread.Start();
             Console.ReadKey();
         }
 
-        private void getMyName()
+        private void GetMyName()
         {
             Console.WriteLine("Andriy");
         }

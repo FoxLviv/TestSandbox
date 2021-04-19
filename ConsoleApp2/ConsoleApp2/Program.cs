@@ -28,6 +28,12 @@ namespace ConsoleApp2
             var threads = new ThreadsExample();
             threads.Example();
 
+            var linqExample = new LinqExample();
+            linqExample.Example();
+
+            var enumerable = new EnumerationExample();
+            //enumerable.AllEx2();
+            enumerable.Example();
             Console.ReadKey();
         }
     }

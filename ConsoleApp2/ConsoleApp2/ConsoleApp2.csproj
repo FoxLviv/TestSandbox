@@ -47,6 +47,7 @@
     <Compile Include="DelegAndEventsExamples.cs" />
     <Compile Include="DictionaryExample.cs" />
     <Compile Include="EnumerationExample.cs" />
+    <Compile Include="LinqExample.cs" />
     <Compile Include="ListExercises.cs" />
     <Compile Include="ClassToCreateConflict.cs" />
     <Compile Include="Program.cs" />
