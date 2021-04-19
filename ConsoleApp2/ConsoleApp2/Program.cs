@@ -27,6 +27,10 @@ namespace ConsoleApp2
 
             var linqExample = new LinqExample();
             linqExample.Example();
+
+            var enumerable = new EnumerationExample();
+            //enumerable.AllEx2();
+            enumerable.Example();
             Console.ReadKey();
         }
     }
