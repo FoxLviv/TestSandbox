@@ -25,15 +25,18 @@ namespace ConsoleApp2
             //var delAndEventExample = new DelegAndEventsExamples();
             //delAndEventExample.Example();
 
-            var threads = new ThreadsExample();
-            threads.Example();
+            //var threads = new ThreadsExample();
+            //threads.Example();
 
-            var linqExample = new LinqExample();
-            linqExample.Example();
+            //var linqExample = new LinqExample();
+            //linqExample.Example();
 
-            var enumerable = new EnumerationExample();
+            //var enumerable = new EnumerationExample();
             //enumerable.AllEx2();
-            enumerable.Example();
+            //enumerable.Example();
+
+            var file = new WorkWithFilesExample();
+            file.Example();
             Console.ReadKey();
         }
     }
