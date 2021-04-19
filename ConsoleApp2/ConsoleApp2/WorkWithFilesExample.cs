@@ -11,15 +11,15 @@ namespace ConsoleApp2
     {
         public async void Example()
         {
-            string path = Directory.GetCurrentDirectory() + "test.txt";
+            var path = Directory.GetCurrentDirectory() + "test.txt";
             try
             {
-                using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
+                using (var sw = new StreamWriter(path, false, Encoding.Default))
                 {
                     await sw.WriteLineAsync(path);
                 }
 
-                using (StreamWriter sw = new StreamWriter(path, true, System.Text.Encoding.Default))
+                using (var sw = new StreamWriter(path, true, Encoding.Default))
                 {
                     await sw.WriteLineAsync("Update");
                 }
@@ -28,7 +28,7 @@ namespace ConsoleApp2
             {
                 Console.WriteLine(e.Message);
             }
-            using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
+            using (var sr = new StreamReader(path, Encoding.Default))
             {
                 string line;
                 while ((line = await sr.ReadLineAsync()) != null)
