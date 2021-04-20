@@ -31,15 +31,14 @@ namespace ConsoleApp2
             //var linqExample = new LinqExample();
             //linqExample.Example();
 
-            //var enumerable = new EnumerationExample();
-            ////enumerable.AllEx2();
-            //enumerable.Example();
-
             //var xmlExam = new XMLExample();
             //xmlExam.Example();
 
             var jsonExample = new JSONExample();
             jsonExample.Example();
+
+            //var file = new WorkWithFilesExample();
+            //file.Example();
 
             Console.ReadKey();
         }
