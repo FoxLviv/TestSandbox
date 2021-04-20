@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.Collections
 {
     class EnumerationExample
     {
@@ -45,7 +45,7 @@ namespace ConsoleApp2
             Console.WriteLine("Elapsed Time is {0} ms", stopwatch.ElapsedMilliseconds);
             stopwatch.Reset();
 
-           
+
 
             stopwatch.Start();
             IEnumerable<string> names2 = from person in people
@@ -54,7 +54,7 @@ namespace ConsoleApp2
             stopwatch.Stop();
             Console.WriteLine("Elapsed Time is {0} ms", stopwatch.ElapsedMilliseconds);
 
-            
+
 
             foreach (string name in names)
             {
@@ -126,5 +126,5 @@ namespace ConsoleApp2
         public Cat[] Pets { get; set; }
     }
 
-    
+
 }

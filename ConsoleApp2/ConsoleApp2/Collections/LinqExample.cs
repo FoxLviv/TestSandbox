@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.Collections
 {
     public class LinqExample
     {
@@ -21,7 +19,7 @@ namespace ConsoleApp2
 
             refTypes.Insert(3, adam);
 
-            
+
             //try
             //{
             //    var firstMarvy = refTypes.First(p => p.Name == "Marvy");
@@ -44,17 +42,17 @@ namespace ConsoleApp2
 
             var people = new List<Client>();
 
-            people.Add(new Client() 
-            { 
-                Name = "Adam", 
-                PhoneNumbers = new List<PhoneNumber>() 
-                { 
+            people.Add(new Client()
+            {
+                Name = "Adam",
+                PhoneNumbers = new List<PhoneNumber>()
+                {
                     new PhoneNumber() { Number = "0958833321" },
                     new PhoneNumber() { Number = "0958833322" },
                     new PhoneNumber() { Number = "0958833323" },
                     new PhoneNumber() { Number = "0958833324" },
                     new PhoneNumber() { Number = "0958833325" },
-                } 
+                }
             });
             people.Add(new Client()
             {
@@ -93,12 +91,12 @@ namespace ConsoleApp2
                .SelectMany(p => p.PhoneNumbers,
                            (parent, child) => new { parent.Name, child.Number });
 
-            var kindOfSorting = people.Where(p => p.Name == "Charlotte").SelectMany(n=>n.PhoneNumbers);
-            
-            foreach(var n in kindOfSorting.OrderBy(n=>n.Number))
+            var kindOfSorting = people.Where(p => p.Name == "Charlotte").SelectMany(n => n.PhoneNumbers);
+
+            foreach (var n in kindOfSorting.OrderBy(n => n.Number))
             {
                 Console.WriteLine(n.Number);
-            }    
+            }
         }
     }
 
@@ -113,5 +111,5 @@ namespace ConsoleApp2
         public string Name { get; set; }
     }
 
-    
+
 }

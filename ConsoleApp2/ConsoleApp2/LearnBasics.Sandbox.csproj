@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{ECEC2DCC-A152-479A-9357-A32C8F731A48}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp2</RootNamespace>
-    <AssemblyName>ConsoleApp2</AssemblyName>
+    <RootNamespace>LearnBasics.Sandbox</RootNamespace>
+    <AssemblyName>LearnBasics</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,25 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassesExample.cs" />
-    <Compile Include="DelegAndEventsExamples.cs" />
-    <Compile Include="DictionaryExample.cs" />
-    <Compile Include="EnumerationExample.cs" />
-    <Compile Include="JSONExample.cs" />
-    <Compile Include="LinqExample.cs" />
-    <Compile Include="ListExercises.cs" />
-    <Compile Include="ClassToCreateConflict.cs" />
+    <Compile Include="Classes\ClassesExample.cs" />
+    <Compile Include="DelegatesAndEvents\DelegAndEventsExamples.cs" />
+    <Compile Include="Collections\DictionaryExample.cs" />
+    <Compile Include="Collections\EnumerationExample.cs" />
+    <Compile Include="WorkWithFiles\JSONExample.cs" />
+    <Compile Include="Collections\LinqExample.cs" />
+    <Compile Include="Collections\ListExercises.cs" />
+    <Compile Include="Classes\ClassToCreateConflict.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringsExample.cs" />
-    <Compile Include="ThreadsExample.cs" />
-    <Compile Include="TypesExercises.cs" />
-    <Compile Include="XMLExample.cs" />
-    <Compile Include="WorkWithFilesExample.cs" />
+    <Compile Include="BasicTypes\StringsExample.cs" />
+    <Compile Include="Threads\ThreadsExample.cs" />
+    <Compile Include="BasicTypes\TypesExercises.cs" />
+    <Compile Include="WorkWithFiles\XMLExample.cs" />
+    <Compile Include="WorkWithFiles\WorkWithFilesExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

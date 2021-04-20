@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.DelegatesAndEvents
 {
     class DelegAndEventsExamples
     {
@@ -9,8 +9,8 @@ namespace ConsoleApp2
         public void Example()
         {
             Message mes = GoodMorning;
-           
-            
+
+
             mes += GoodEvening;
             mes();
             if (DateTime.Now.Hour < 12)
@@ -74,7 +74,7 @@ namespace ConsoleApp2
             if (x1 > 0)
             {
                 result = retF(x1);
-            }                
+            }
             return result;
         }
         int Factorial(int x)

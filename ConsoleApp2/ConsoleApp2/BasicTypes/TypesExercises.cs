@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.BasicTypes
 {
     public class TypesExercises
     {
@@ -62,11 +58,11 @@ namespace ConsoleApp2
             int res = 0;
             try
             {
-                 res = (int)obj;
+                res = (int)obj;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                Console.WriteLine(e.Message);                
+                Console.WriteLine(e.Message);
             }
             res = res + 321;
             obj = res;
@@ -80,14 +76,14 @@ namespace ConsoleApp2
 
         public A DeepCopy()
         {
-            var other = (A)this.MemberwiseClone();
+            var other = (A)MemberwiseClone();
             other.BClassValue = new B(BClassValue.DeeperValue);
             return other;
         }
 
         public A SwallowCopy()
         {
-            return (A)this.MemberwiseClone();
+            return (A)MemberwiseClone();
         }
     }
 
