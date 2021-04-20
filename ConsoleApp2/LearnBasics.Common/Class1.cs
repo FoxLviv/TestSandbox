@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace LearnBasics.Common
 {
-    class ClassToCreateConflict
+    public class Class1
     {
     }
 }

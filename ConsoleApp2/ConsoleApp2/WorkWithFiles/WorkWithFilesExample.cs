@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.WorkWithFiles
 {
     class WorkWithFilesExample
     {
         public async void Example()
         {
-            var path = Path.Combine( Directory.GetCurrentDirectory(), "test.txt");
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "test.txt");
             try
             {
                 using (var sw = new StreamWriter(path, false, Encoding.Default))

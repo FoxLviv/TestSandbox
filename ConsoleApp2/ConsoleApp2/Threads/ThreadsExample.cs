@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.Threads
 {
     class ThreadsExample
     {
@@ -29,12 +26,12 @@ namespace ConsoleApp2
             Console.WriteLine("Andriy");
         }
 
-        public void SideFunc(Object stateInfo)
+        public void SideFunc(object stateInfo)
         {
             Console.WriteLine("Hello from second funtion");
         }
 
-        public void More(Object stateInfo)
+        public void More(object stateInfo)
         {
             Console.WriteLine("Hello from third funtion");
         }
@@ -67,8 +64,8 @@ namespace ConsoleApp2
 
         public void DeadLockExample()
         {
-            var thread1 = new Thread((ThreadStart)ObliviousFunction);
-            var thread2 = new Thread((ThreadStart)BlindFunction);
+            var thread1 = new Thread(ObliviousFunction);
+            var thread2 = new Thread(BlindFunction);
 
             thread1.Start();
             thread2.Start();

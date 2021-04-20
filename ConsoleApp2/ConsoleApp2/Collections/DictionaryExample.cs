@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.Collections
 {
     class DictionaryExample
     {
@@ -18,7 +15,7 @@ namespace ConsoleApp2
             if (numberNames.ContainsKey(3))
             {
                 numberNames.Remove(3);
-            }                
+            }
 
             string result;
             if (numberNames.TryGetValue(2, out result))
@@ -31,8 +28,8 @@ namespace ConsoleApp2
             {
                 Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value);
             }
-                
+
         }
-        
+
     }
 }

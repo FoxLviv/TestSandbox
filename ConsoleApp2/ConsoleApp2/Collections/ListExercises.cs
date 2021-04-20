@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.Collections
 {
     public class ListExercises
     {

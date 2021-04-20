@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace ConsoleApp2
+namespace LearnBasics.SandBox.Classes
 {
     class ClassesExample
     {
-        Plant tree = new Tree("IDK","Cherry");
+        Plant tree = new Tree("IDK", "Cherry");
         ILeaf leaf = new Tree("IDK", "Apple");
     }
     //https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-c-sharp/
