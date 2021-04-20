@@ -11,7 +11,7 @@ namespace ConsoleApp2
     {
         public async void Example()
         {
-            var path = Directory.GetCurrentDirectory() + "test.txt";
+            var path = Path.Combine( Directory.GetCurrentDirectory() + "test.txt");
             try
             {
                 using (var sw = new StreamWriter(path, false, Encoding.Default))
