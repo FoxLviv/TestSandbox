@@ -55,6 +55,7 @@
     <Compile Include="StringsExample.cs" />
     <Compile Include="ThreadsExample.cs" />
     <Compile Include="TypesExercises.cs" />
+    <Compile Include="WorkWithFilesExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
