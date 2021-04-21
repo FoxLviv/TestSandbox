@@ -25,7 +25,7 @@ namespace LearnBasics.Sandbox.SOLID
 
         public Book(IPrinter printer)
         {
-            this.Printer = printer;
+            Printer = printer;
         }
 
         public void Print()
