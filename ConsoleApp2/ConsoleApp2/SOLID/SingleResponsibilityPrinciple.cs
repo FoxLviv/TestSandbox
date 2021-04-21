@@ -22,7 +22,7 @@ namespace LearnBasics.Sandbox.SOLID
 
     class MobileStore
     {
-        List<Phone> phones = new List<Phone>();
+        private List<Phone> _phones = new List<Phone>();
 
         public IPhoneReader Reader { get; set; }
         public IPhoneBinder Binder { get; set; }
@@ -31,69 +31,80 @@ namespace LearnBasics.Sandbox.SOLID
 
         public MobileStore(IPhoneReader reader, IPhoneBinder binder, IPhoneValidator validator, IPhoneSaver saver)
         {
-            this.Reader = reader;
-            this.Binder = binder;
-            this.Validator = validator;
-            this.Saver = saver;
+            Reader = reader;
+            Binder = binder;
+            Validator = validator;
+            Saver = saver;
         }
 
         public void Process()
         {
-            string[] data = Reader.GetInputData();
+            PhoneModel data = Reader.GetInputData();
             var phone = Binder.CreatePhone(data);
             if (Validator.IsValid(phone))
             {
-                phones.Add(phone);
+                _phones.Add(phone);
                 Saver.Save(phone, "store.txt");
-                Console.WriteLine("Данные успешно обработаны");
+                Console.WriteLine("Data succesfully analysed");
             }
             else
             {
-                Console.WriteLine("Некорректные данные");
+                Console.WriteLine("Incorrect data");
             }
+        }
+    }
+
+    class PhoneModel
+    {
+        public string Model { get; set; }
+        public string Price { get; set; }
+        public PhoneModel(string model, string price)
+        {
+            Model = model;
+            Price = price;
         }
     }
 
     interface IPhoneReader
     {
-        string[] GetInputData();
+        PhoneModel GetInputData();
     }
     class ConsolePhoneReader : IPhoneReader
     {
-        public string[] GetInputData()
+        public PhoneModel GetInputData()
         {
-            Console.WriteLine("Введите модель:");
+            Console.WriteLine("Input model:");
             string model = Console.ReadLine();
-            Console.WriteLine("Введите цену:");
+            Console.WriteLine("Input price:");
             string price = Console.ReadLine();
-            return new string[] { model, price };
+            return new PhoneModel ( model, price );//class
         }
     }
 
     interface IPhoneBinder
     {
-        Phone CreatePhone(string[] data);
+        Phone CreatePhone(PhoneModel data);
     }
 
     class GeneralPhoneBinder : IPhoneBinder
     {
-        public Phone CreatePhone(string[] data)
+        public Phone CreatePhone(PhoneModel data)
         {
-            if (data.Length >= 2)
+            if (data != null)
             {
                 int price = 0;
-                if (Int32.TryParse(data[1], out price))
+                if (Int32.TryParse(data.Price, out price))
                 {
-                    return new Phone { Model = data[0], Price = price };
+                    return new Phone { Model = data.Price, Price = price };
                 }
                 else
                 {
-                    throw new Exception("Ошибка привязчика модели Phone. Некорректные данные для свойства Price");
+                    throw new Exception("Model binder erorr for Phone. Incorrect data for Price");
                 }
             }
             else
             {
-                throw new Exception("Ошибка привязчика модели Phone. Недостаточно данных для создания модели");
+                throw new Exception("Model binder erorr for Phone. Not enough data to create model");
             }
         }
     }
