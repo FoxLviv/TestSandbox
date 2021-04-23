@@ -1,4 +1,5 @@
-﻿using LearnBasics.SandBox.BasicTypes;
+﻿using LearnBasics.Sandbox.Dependency_injection;
+using LearnBasics.SandBox.BasicTypes;
 using LearnBasics.SandBox.Collections;
 using LearnBasics.SandBox.DelegatesAndEvents;
 using LearnBasics.SandBox.Threads;
@@ -14,7 +15,6 @@ namespace LearnBasics.SandBox
         {
             //var typesExercises = new TypesExercises();
             //int tmp = typesExercises.TestReferenceType();
-
 
             //typesExercises.Test2CloneReferenceType();
             //typesExercises.BoxingExample();
@@ -45,6 +45,9 @@ namespace LearnBasics.SandBox
 
             //var file = new WorkWithFilesExample();
             //file.Example();
+
+            var DIExample = new DIConfiguration();
+            DIExample.Main();
 
             var single = new SingletonExample();
             single.Example();
