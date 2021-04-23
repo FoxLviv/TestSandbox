@@ -63,6 +63,7 @@
     <Compile Include="Dependency injection\DIConfiguration.cs" />
     <Compile Include="Dependency injection\DL.cs" />
     <Compile Include="Dependency injection\IProduct.cs" />
+    <Compile Include="Patterns\Singleton.cs" />
     <Compile Include="SOLID\SingleResponsibilityPrinciple.cs" />
     <Compile Include="SOLID\DependencyInversionPrinciple.cs" />
     <Compile Include="WorkWithFiles\JSONExample.cs" />

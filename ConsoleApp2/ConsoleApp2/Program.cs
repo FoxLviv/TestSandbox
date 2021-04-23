@@ -4,6 +4,7 @@ using LearnBasics.SandBox.Collections;
 using LearnBasics.SandBox.DelegatesAndEvents;
 using LearnBasics.SandBox.Threads;
 using LearnBasics.SandBox.WorkWithFiles;
+using LearnBasics.Sandbox.Patterns;
 using System;
 
 namespace LearnBasics.SandBox
@@ -47,6 +48,9 @@ namespace LearnBasics.SandBox
 
             var DIExample = new DIConfiguration();
             DIExample.Main();
+
+            var single = new SingletonExample();
+            single.Example();
 
             Console.ReadKey();
         }
