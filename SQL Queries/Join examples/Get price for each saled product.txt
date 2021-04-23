@@ -1,0 +1,6 @@
+FROM Products as p
+inner join orderdetails as o
+ON p.ProductID == o.ProductID
+Group by ProductName
+having sum(summary)
+Order by Summary;
