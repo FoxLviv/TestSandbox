@@ -1,0 +1,23 @@
+WITH cte_category_counts (
+    categoryid, 
+    categoryname, 
+    productcount
+)
+AS (
+    SELECT 
+        c.categoryid, 
+        c.categoryname, 
+        COUNT(p.productid)
+    FROM 
+        products p
+        INNER JOIN categories c 
+            ON c.categoryid = p.categoryid
+    GROUP BY 
+        c.categoryid, 
+        c.categoryname
+)
+select 
+	categoryid, 
+    categoryname, 
+    productcount
+from cte_category_counts;
