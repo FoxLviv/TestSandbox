@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LearnBasics.Common
 {
-    public class Class1
+    public interface ILogger
     {
+        void Print(string data);
     }
 }
