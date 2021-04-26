@@ -63,6 +63,7 @@
     <Compile Include="Dependency injection\DIConfiguration.cs" />
     <Compile Include="Dependency injection\DL.cs" />
     <Compile Include="Dependency injection\IProduct.cs" />
+    <Compile Include="Dependency injection\NewBL.cs" />
     <Compile Include="Patterns\Singleton.cs" />
     <Compile Include="SOLID\SingleResponsibilityPrinciple.cs" />
     <Compile Include="SOLID\DependencyInversionPrinciple.cs" />
@@ -82,6 +83,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\LearnBasics.Common\LearnBasics.Common.csproj">
+      <Project>{3552EE9E-45D0-4771-997D-CF97625FE298}</Project>
+      <Name>LearnBasics.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearnBasics.Services\LearnBasics.Services.csproj">
+      <Project>{519824BF-19F1-495E-B117-21527960F1B5}</Project>
+      <Name>LearnBasics.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
